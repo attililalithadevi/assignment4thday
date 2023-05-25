@@ -1,0 +1,24 @@
+# assignment4thday
+# assignmen 4.2
+write a c program to to reverse the given string and print both strings (means reversed string and original string)in seprate lines in c language?
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char str[100], rev_str[100];
+  int i, len;
+  printf("Enter a string: ");
+  fgets(str, 100, stdin);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    rev_str[i] = str[len - i - 1];
+  }
+  rev_str[len] = '\0';
+  printf("Original string: %s", str);
+  printf("Reversed string: %s", rev_str);
+  return 0;
+}
+output:
+Enter a string: lalitha
+Original string: lalitha
+Reversed string: 
+ahtilal
