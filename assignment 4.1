@@ -1,0 +1,31 @@
+# assignment4thday
+# assignment 4.1
+write a c program to find how many number of spl and lower case letter chars are there in the given string using string concept in c language?
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+  char str[100];
+  int i, len, spl_char = 0, lower_case = 0, upper_case = 0;
+  printf("Enter a string: ");
+  fgets(str, 100, stdin);
+  len = strlen(str);
+  for (i = 0; i < len; i++) {
+    if (str[i] >= 'A' && str[i] <= 'Z') {
+      upper_case++;
+    } else if (str[i] >= 'a' && str[i] <= 'z') {
+      lower_case++;
+    } else {
+      spl_char++;
+    }
+  }
+  printf("Number of uppercase letters: %d\n", upper_case);
+  printf("Number of lowercase letters: %d\n", lower_case);
+  printf("Number of special characters: %d\n", spl_char);
+  return 0;
+}
+output:
+Enter a string: Lalitha @ awdckkd
+Number of uppercase letters: 1
+Number of lowercase letters: 13
+Number of special characters: 4
